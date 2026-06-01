@@ -47,3 +47,13 @@ resource "aws_db_instance" "grocery_db" {
     Name = "grocery-database"
   }
 }
+
+
+# S3 Bucket für die Grocery App
+resource "aws_s3_bucket" "grocery_bucket" {
+  bucket = "aws-grocery-infrastructure-mo1mohammad"
+
+  tags = {
+    Name = "grocery-s3-bucket"
+  }
+}
